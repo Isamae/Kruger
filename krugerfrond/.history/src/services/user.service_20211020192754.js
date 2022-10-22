@@ -1,0 +1,32 @@
+import Http from './http';
+
+class UserService{
+    getPublicContent() {
+        return Http.getAuthPublic().get('/test/all');
+    }
+
+    getUsers(){
+        return Http.getAuthPrivate().get('/user/all');
+    }
+
+    getUser(id){
+        return Http.getAuthPrivate().get(`/edit/user/${id}`);
+    }
+
+    userSave(){
+        return Http.getAuthPrivate().post('/user/save');
+    }
+    
+    updateUser(){
+        return Http.getAuthPrivate().updated('/user/update');
+    }
+
+    filterUsers(){
+        return Http.getAuthPrivate().post('/user/filter');
+    }
+
+    deleteOrder(id) {
+        return Http.getAuthPrivate().delete(`/user/delete/${id}`);
+    }
+}
+export default new UserService();

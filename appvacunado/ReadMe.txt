@@ -1,0 +1,1 @@
+servidor de peticiones para krugerFrond, esta version la comunicación(UserService) con la base de datos se hace directa con la base de postgres
